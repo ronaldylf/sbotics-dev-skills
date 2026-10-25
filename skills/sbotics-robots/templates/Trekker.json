@@ -1,0 +1,423 @@
+{
+  "name": "Trekker",
+  "blocks": [
+    {
+      "type": "Cube",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorYellow"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorOrange"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorRed"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": -1,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorOrange"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": -1,
+        "y": 0,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": -1,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorRed"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorRed"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": -1
+      },
+      "color": "ColorYellow"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": -1,
+        "y": 0,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": -1,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorYellow"
+    },
+    {
+      "type": "LargeWheel",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": -2
+      },
+      "rotation": {
+        "x": 270,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": -1
+      },
+      "color": "ColorLime"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": 2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": 1
+      },
+      "name": "rc"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": -1,
+        "y": 0,
+        "z": 2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": -1,
+        "y": 0,
+        "z": 1
+      },
+      "name": "lc"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": -2,
+        "y": 0,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 270
+      },
+      "anchor": {
+        "x": -1,
+        "y": 0,
+        "z": 1
+      },
+      "name": "l"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": 2,
+        "y": 0,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 270
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": 1
+      },
+      "name": "r"
+    },
+    {
+      "type": "LargeWheel",
+      "position": {
+        "x": -3,
+        "y": 0,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 270
+      },
+      "anchor": {
+        "x": -2,
+        "y": 0,
+        "z": 1
+      },
+      "color": "ColorBlack"
+    },
+    {
+      "type": "LargeWheel",
+      "position": {
+        "x": 3,
+        "y": 0,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 270
+      },
+      "anchor": {
+        "x": 2,
+        "y": 0,
+        "z": 1
+      },
+      "color": "ColorBlack"
+    },
+    {
+      "type": "Light",
+      "position": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "name": "led"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": -1,
+        "y": 1,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": -1,
+        "y": 0,
+        "z": -1
+      },
+      "color": "ColorRed"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 0,
+        "y": 1,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": -1,
+        "y": 1,
+        "z": -1
+      },
+      "color": "ColorBlue"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 1,
+        "y": 1,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 1,
+        "z": -1
+      },
+      "color": "ColorRed"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -1,
+        "y": 1,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": -1,
+        "y": 1,
+        "z": -1
+      },
+      "color": "ColorRed"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 0,
+        "y": 1,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 1,
+        "z": -1
+      },
+      "color": "ColorBlue"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 1,
+        "y": 1,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 1,
+        "z": -1
+      },
+      "color": "ColorRed"
+    }
+  ]
+}
