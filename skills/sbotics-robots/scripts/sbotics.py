@@ -29,6 +29,29 @@ VALID_PLACEABLES = {
     "Slab", "Camera", "Pen", "Pyramid", "WedgeColorSensor", "WedgeUltrasonicSensor", "Corner"
 }
 
+CORE_WEIGHT = 1.0
+
+PLACEABLE_WEIGHTS: Dict[str, float] = {
+    "Servomotor": 2.00,
+    "LargeWheel": 1.50,
+    "Cube": 1.00,
+    "ColorSensor": 1.00,
+    "UltrasonicSensor": 1.00,
+    "TouchSensor": 1.00,
+    "Camera": 1.00,
+    "Buzzer": 1.00,
+    "Pen": 1.00,
+    "SmallWheel": 0.75,
+    "Light": 0.75,
+    "Pyramid": 0.66,
+    "Wedge": 0.50,
+    "Slab": 0.50,
+    "WedgeColorSensor": 0.50,
+    "WedgeUltrasonicSensor": 0.50,
+    "Corner": 0.35,
+    "Hinge": 0.25,
+}
+
 VALID_MATERIALS = {
     "ColorWhite", "ColorGray", "ColorDarkGray", "ColorBlack",
     "ColorGreen", "ColorLime", "ColorTeal", "ColorCyan",
@@ -110,6 +133,81 @@ def encrypt_sbot(plain_json_str: str, robot_name: str) -> str:
     return json.dumps(outer, separators=(',', ':'))
 
 
+def calculate_physics(robot: Dict[str, Any]) -> Dict[str, Any]:
+    """Calcula peso total (Zg), Centro de Massa (CoM) e indicadores de equilíbrio do robô."""
+    blocks = robot.get("blocks", [])
+    # Inclui o Core fixo em (0, 0, 0) com 1.0 Zg
+    total_weight = CORE_WEIGHT
+    wx, wy, wz = 0.0, 0.0, 0.0
+
+    min_x, max_x = 0.0, 0.0
+    min_y, max_y = 0.0, 0.0
+    min_z, max_z = 0.0, 0.0
+
+    wheel_xs: List[float] = []
+    wheel_zs: List[float] = []
+
+    for b in blocks:
+        b_type = b.get("type", "")
+        pos = b.get("position", {})
+        px = float(pos.get("x", 0))
+        py = float(pos.get("y", 0))
+        pz = float(pos.get("z", 0))
+
+        w = PLACEABLE_WEIGHTS.get(b_type, 1.0)
+        total_weight += w
+        wx += px * w
+        wy += py * w
+        wz += pz * w
+
+        min_x, max_x = min(min_x, px), max(max_x, px)
+        min_y, max_y = min(min_y, py), max(max_y, py)
+        min_z, max_z = min(min_z, pz), max(max_z, pz)
+
+        if b_type in ("LargeWheel", "SmallWheel"):
+            wheel_xs.append(px)
+            wheel_zs.append(pz)
+
+    com_x = wx / total_weight
+    com_y = wy / total_weight
+    com_z = wz / total_weight
+
+    if wheel_xs:
+        support_center_x = (min(wheel_xs) + max(wheel_xs)) / 2.0
+        wheel_min_z, wheel_max_z = min(wheel_zs), max(wheel_zs)
+    else:
+        support_center_x = (min_x + max_x) / 2.0
+        wheel_min_z, wheel_max_z = min_z, max_z
+
+    lateral_offset = com_x - support_center_x
+    balance_warnings: List[str] = []
+
+    if abs(lateral_offset) > 0.25:
+        side = "direita (+X)" if lateral_offset > 0 else "esquerda (-X)"
+        balance_warnings.append(
+            f"Desequilíbrio lateral detectado: Centro de Massa X ({com_x:.2f}) está deslocado em "
+            f"{lateral_offset:+.2f} blocos para a {side} em relação ao centro das rodas ({support_center_x:.2f}). "
+            "O robô pode puxar para o lado ou tombar em curvas."
+        )
+
+    if wheel_zs and (com_z > wheel_max_z + 0.3 or com_z < wheel_min_z - 0.3):
+        dir_z = "frente (+Z)" if com_z > wheel_max_z else "trás (-Z)"
+        balance_warnings.append(
+            f"Desequilíbrio longitudinal: Centro de Massa Z ({com_z:.2f}) está fora da base de apoio das rodas "
+            f"[{wheel_min_z:.1f}, {wheel_max_z:.1f}], pendendo para {dir_z}."
+        )
+
+    return {
+        "total_weight": total_weight,
+        "com": (com_x, com_y, com_z),
+        "support_center_x": support_center_x,
+        "lateral_offset": lateral_offset,
+        "wheel_z_range": (wheel_min_z, wheel_max_z),
+        "bounds": ((min_x, max_x), (min_y, max_y), (min_z, max_z)),
+        "balance_warnings": balance_warnings,
+    }
+
+
 def validate_robot(robot: Dict[str, Any]) -> Tuple[List[str], List[str], Dict[str, str]]:
     """Valida as restrições físicas e estruturais do robô para o sBotics."""
     errors = []
@@ -179,6 +277,9 @@ def validate_robot(robot: Dict[str, Any]) -> Tuple[List[str], List[str], Dict[st
             if a_key != (0, 0, 0) and a_key != p_key and a_key not in pos_map:
                 warnings.append(f"Bloco em ({px},{py},{pz}) tem 'anchor' ({ax},{ay},{az}) apontando para coordenada vazia.")
 
+    physics = calculate_physics(robot)
+    warnings.extend(physics["balance_warnings"])
+
     return errors, warnings, components
 
 
@@ -212,10 +313,17 @@ def cmd_validate(args):
             robot = json.load(f)
 
     errors, warnings, components = validate_robot(robot)
+    physics = calculate_physics(robot)
+    com_x, com_y, com_z = physics["com"]
 
     print("================ Relatório de Validação ================")
     print(f"Nome do Robô: {robot.get('name', 'Sem Nome')}")
-    print(f"Total de Blocos: {len(robot.get('blocks', []))}")
+    print(f"Total de Blocos: {len(robot.get('blocks', []))} (+1 Core = {len(robot.get('blocks', [])) + 1})")
+    print(f"Peso Total Estimado: {physics['total_weight']:.2f} Zg")
+    print(
+        f"Centro de Massa (CoM): X={com_x:+.2f}, Y={com_y:+.2f}, Z={com_z:+.2f} "
+        f"(Centro Lateral das Rodas X={physics['support_center_x']:+.2f}, Desvio Lateral={physics['lateral_offset']:+.2f})"
+    )
     print(f"Componentes Nomeados ({len(components)}):")
     for name, pos in components.items():
         print(f"  - {name:20} -> {pos}")
@@ -263,21 +371,38 @@ def cmd_info(args):
         min_z, max_z = min(min_z, z), max(max_z, z)
 
     spawn_height = 0.3 + (-min_y * 0.6)
+    physics = calculate_physics(robot)
+    com_x, com_y, com_z = physics["com"]
 
     print("================ Resumo do Robô ================")
     print(f"Nome: {robot.get('name')}")
-    print(f"Total de Peças: {len(blocks)}")
+    print(f"Total de Peças: {len(blocks)} (+1 Core)")
+    print(f"Peso Total: {physics['total_weight']:.2f} Zg (inclui Core = {CORE_WEIGHT:.2f} Zg)")
+    print(f"Centro de Massa (CoM): X={com_x:+.2f}, Y={com_y:+.2f}, Z={com_z:+.2f}")
+    print(f"Equilíbrio Lateral: Centro das Rodas X={physics['support_center_x']:+.2f} | Desvio Lateral={physics['lateral_offset']:+.2f} blocos")
     print(f"Dimensões na Grade: X=[{min_x}, {max_x}] ({max_x - min_x + 1} blocos), Z=[{min_z}, {max_z}] ({max_z - min_z + 1} blocos)")
     print(f"Altura de Spawn Calculada: {spawn_height:.2f} unidades")
-    print("\nDistribuição de Peças:")
+    print("\nDistribuição de Peças e Pesos:")
     for t, c in sorted(type_counts.items(), key=lambda x: -x[1]):
-        print(f"  {t:24} : {c}")
+        w_unit = PLACEABLE_WEIGHTS.get(t, 1.0)
+        print(f"  {t:24} : {c:3d} un. ({w_unit:.2f} Zg/un -> {c * w_unit:5.2f} Zg)")
 
 
 def cmd_generate(args):
-    template_path = os.path.join(os.path.dirname(__file__), "..", "templates", "basic_robot.json")
+    tpl = getattr(args, "template", None) or "basic_robot"
+    if not tpl.endswith(".json"):
+        tpl = f"{tpl}.json"
+    template_path = os.path.join(os.path.dirname(__file__), "..", "templates", tpl)
     if not os.path.exists(template_path):
-        raise FileNotFoundError(f"Template não encontrado em {template_path}")
+        available = [
+            os.path.splitext(f)[0]
+            for f in os.listdir(os.path.join(os.path.dirname(__file__), "..", "templates"))
+            if f.endswith(".json")
+        ]
+        raise FileNotFoundError(
+            f"Template '{tpl}' não encontrado em {template_path}. "
+            f"Templates disponíveis: {', '.join(sorted(available))}"
+        )
 
     with open(template_path, "r", encoding="utf-8-sig") as f:
         robot = json.load(f)
@@ -287,7 +412,7 @@ def cmd_generate(args):
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(robot, f, indent=2, ensure_ascii=False)
 
-    print(f"[OK] Robô base '{args.name}' gerado a partir do template com sucesso!")
+    print(f"[OK] Robô base '{args.name}' gerado a partir do template '{tpl}' com sucesso!")
     print(f"Arquivo salvo em: {out_path}")
 
 
@@ -321,6 +446,7 @@ def main():
     # generate
     p_gen = subparsers.add_parser("generate", help="Gera um robô base a partir de template")
     p_gen.add_argument("-n", "--name", required=True, help="Nome do novo robô")
+    p_gen.add_argument("-t", "--template", default="basic_robot", help="Nome do template em templates/ (ex: basic_robot, Trekker, Bruna, Boryszin, Obsidian)")
     p_gen.add_argument("-o", "--output", help="Arquivo JSON de saída")
     p_gen.set_defaults(func=cmd_generate)
 

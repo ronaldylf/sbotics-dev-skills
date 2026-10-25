@@ -96,27 +96,29 @@ Ao descriptografar o conteúdo de `value`, obtém-se o JSON de definição do ro
 
 Extraídos dos tipos enumerados do código-fonte do simulador (`sBotics.enums`):
 
-### 5.1 Tipos de Blocos (`sBotics.enums.Placeables`)
-| Nome no JSON | Código Interno | Descrição |
-| :--- | :---: | :--- |
-| `Cube` | 1 | Cubo estrutural básico |
-| `Wedge` | 2 | Rampa / Cunha |
-| `Hinge` | 3 | Dobradiça |
-| `SmallWheel` | 4 | Roda pequena |
-| `LargeWheel` | 5 | Roda grande |
-| `Buzzer` | 6 | Emissor sonoro |
-| `Light` | 7 | LED / Farol |
-| `Servomotor` | 8 | Servomotor rotacional |
-| `ColorSensor` | 9 | Sensor de cor padrão |
-| `UltrasonicSensor` | 10 | Sensor ultrassônico padrão |
-| `TouchSensor` | 11 | Sensor de toque / fim de curso |
-| `Slab` | 12 | Placa fina (meio bloco) |
-| `Camera` | 13 | Módulo de câmera |
-| `Pen` | 14 | Caneta de traçado |
-| `Pyramid` | 15 | Bloco piramidal |
-| `WedgeColorSensor` | 16 | Sensor de cor integrado em rampa |
-| `WedgeUltrasonicSensor` | 17 | Sensor ultrassônico integrado em rampa |
-| `Corner` | 18 | Canto chanfrado |
+### 5.1 Tipos de Blocos e Pesos Físicos (`sBotics.enums.Placeables`)
+O peso de cada bloco (medido em **Zg** na Oficina de Robôs) não é serializado no JSON do `.sBot`, pois é definido diretamente no `Rigidbody.mass` do *Prefab* correspondente na Unity. O bloco **Core (`RobotController`)** na origem `(0, 0, 0)` possui peso fixo de **`1.00 Zg`**.
+
+| Nome no JSON | Código Interno | Peso (`Zg`) | Descrição |
+| :--- | :---: | :---: | :--- |
+| `Cube` | 1 | `1.00 Zg` | Cubo estrutural básico |
+| `Wedge` | 2 | `0.50 Zg` | Rampa / Cunha |
+| `Hinge` | 3 | `0.25 Zg` | Dobradiça passiva |
+| `SmallWheel` | 4 | `0.75 Zg` | Roda pequena |
+| `LargeWheel` | 5 | `1.50 Zg` | Roda grande |
+| `Buzzer` | 6 | `1.00 Zg` | Emissor sonoro |
+| `Light` | 7 | `0.75 Zg` | LED / Farol |
+| `Servomotor` | 8 | `2.00 Zg` | Servomotor rotacional (peça mais pesada) |
+| `ColorSensor` | 9 | `1.00 Zg` | Sensor de cor padrão |
+| `UltrasonicSensor` | 10 | `1.00 Zg` | Sensor ultrassônico padrão |
+| `TouchSensor` | 11 | `1.00 Zg` | Sensor de toque / fim de curso |
+| `Slab` | 12 | `0.50 Zg` | Placa fina (meio bloco) |
+| `Camera` | 13 | `1.00 Zg` | Módulo de câmera |
+| `Pen` | 14 | `1.00 Zg` | Caneta de traçado |
+| `Pyramid` | 15 | `0.66 Zg` | Bloco piramidal |
+| `WedgeColorSensor` | 16 | `0.50 Zg` | Sensor de cor integrado em rampa |
+| `WedgeUltrasonicSensor` | 17 | `0.50 Zg` | Sensor ultrassônico integrado em rampa |
+| `Corner` | 18 | `0.35 Zg` | Canto chanfrado |
 
 ### 5.2 Cores e Materiais (`sBotics.enums.ObjectMaterials`)
 * `ColorWhite` (Branco)

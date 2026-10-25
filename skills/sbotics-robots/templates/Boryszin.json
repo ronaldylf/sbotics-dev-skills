@@ -1,0 +1,1107 @@
+{
+  "name": "Boryszin",
+  "blocks": [
+    {
+      "type": "Cube",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorBlue"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorGreen"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 1,
+        "y": -1,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorBlue"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": -1,
+        "y": -1,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 270
+      },
+      "anchor": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      },
+      "name": "E"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": 2,
+        "y": -1,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 270
+      },
+      "anchor": {
+        "x": 1,
+        "y": -1,
+        "z": 0
+      },
+      "name": "D"
+    },
+    {
+      "type": "LargeWheel",
+      "position": {
+        "x": 3,
+        "y": -1,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 270
+      },
+      "anchor": {
+        "x": 2,
+        "y": -1,
+        "z": 0
+      },
+      "color": "ColorBlack"
+    },
+    {
+      "type": "LargeWheel",
+      "position": {
+        "x": -2,
+        "y": -1,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 270
+      },
+      "anchor": {
+        "x": -1,
+        "y": -1,
+        "z": 0
+      },
+      "color": "ColorBlack"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": 1,
+        "y": -1,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": -1,
+        "z": 0
+      },
+      "name": "CD"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": 2,
+        "y": -1,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": -1,
+        "z": 1
+      },
+      "name": "CCD"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": 0,
+        "y": -1,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": -1,
+        "z": 0
+      },
+      "name": "CE"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": -1,
+        "y": -1,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": -1,
+        "z": 1
+      },
+      "name": "CCE"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorBlue"
+    },
+    {
+      "type": "UltrasonicSensor",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": -1
+      },
+      "name": "UD"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": -3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": -2
+      },
+      "color": "ColorBlue"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorBlue"
+    },
+    {
+      "type": "UltrasonicSensor",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 180
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": -1
+      },
+      "name": "UE"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": -3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 180
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": -2
+      },
+      "color": "ColorBlue"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": -4
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 180
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": -3
+      },
+      "color": "ColorTeal"
+    },
+    {
+      "type": "Hinge",
+      "position": {
+        "x": 2,
+        "y": -1,
+        "z": 2
+      },
+      "rotation": {
+        "x": 90,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": 2,
+        "y": -1,
+        "z": 1
+      },
+      "color": "ColorTeal"
+    },
+    {
+      "type": "Hinge",
+      "position": {
+        "x": -1,
+        "y": -1,
+        "z": 2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "anchor": {
+        "x": -1,
+        "y": -1,
+        "z": 1
+      },
+      "color": "ColorTeal"
+    },
+    {
+      "type": "SmallWheel",
+      "position": {
+        "x": -2,
+        "y": -1,
+        "z": 2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "anchor": {
+        "x": -1,
+        "y": -1,
+        "z": 2
+      },
+      "color": "ColorBlack"
+    },
+    {
+      "type": "SmallWheel",
+      "position": {
+        "x": 3,
+        "y": -1,
+        "z": 2
+      },
+      "rotation": {
+        "x": 90,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": 2,
+        "y": -1,
+        "z": 2
+      },
+      "color": "ColorBlack"
+    },
+    {
+      "type": "UltrasonicSensor",
+      "position": {
+        "x": 0,
+        "y": -1,
+        "z": -4
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": -4
+      },
+      "name": "UT"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": -1,
+        "y": -1,
+        "z": -4
+      },
+      "rotation": {
+        "x": 90,
+        "y": 90,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": -1,
+        "z": -4
+      },
+      "name": "E2"
+    },
+    {
+      "type": "LargeWheel",
+      "position": {
+        "x": -2,
+        "y": -1,
+        "z": -4
+      },
+      "rotation": {
+        "x": 90,
+        "y": 90,
+        "z": 0
+      },
+      "anchor": {
+        "x": -1,
+        "y": -1,
+        "z": -4
+      },
+      "color": "ColorBlack"
+    },
+    {
+      "type": "UltrasonicSensor",
+      "position": {
+        "x": 0,
+        "y": -1,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 180
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": -2
+      },
+      "name": "UEB"
+    },
+    {
+      "type": "UltrasonicSensor",
+      "position": {
+        "x": 1,
+        "y": -1,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": -2
+      },
+      "name": "UDB"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "anchor": {
+        "x": 1,
+        "y": -1,
+        "z": 1
+      },
+      "name": "a"
+    },
+    {
+      "type": "SmallWheel",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": 1
+      },
+      "color": "ColorDarkGray"
+    },
+    {
+      "type": "UltrasonicSensor",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": 2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 180
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": 1
+      },
+      "name": "UF"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 270
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "name": "CF"
+    },
+    {
+      "type": "UltrasonicSensor",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": -4
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": -3
+      },
+      "name": "UTC"
+    },
+    {
+      "type": "UltrasonicSensor",
+      "position": {
+        "x": 1,
+        "y": -1,
+        "z": -4
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": -4
+      },
+      "name": "UT2"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": 2,
+        "y": -1,
+        "z": -4
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 90
+      },
+      "anchor": {
+        "x": 1,
+        "y": -1,
+        "z": -4
+      },
+      "name": "D2"
+    },
+    {
+      "type": "LargeWheel",
+      "position": {
+        "x": 3,
+        "y": -1,
+        "z": -4
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 90
+      },
+      "anchor": {
+        "x": 2,
+        "y": -1,
+        "z": -4
+      },
+      "color": "ColorBlack"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": 1,
+        "y": 1,
+        "z": -4
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 90
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": -4
+      },
+      "name": "T"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": 0,
+        "y": 1,
+        "z": 2
+      },
+      "rotation": {
+        "x": 90,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 2
+      },
+      "name": "G"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 1,
+        "y": 1,
+        "z": -3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 180
+      },
+      "anchor": {
+        "x": 1,
+        "y": 1,
+        "z": -4
+      },
+      "color": "ColorDarkGray"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 1,
+        "y": 2,
+        "z": -3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 90
+      },
+      "anchor": {
+        "x": 1,
+        "y": 1,
+        "z": -3
+      },
+      "color": "ColorDarkGray"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": 1,
+        "y": 1,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 180
+      },
+      "anchor": {
+        "x": 1,
+        "y": 1,
+        "z": -3
+      },
+      "name": "CT"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 0,
+        "y": 1,
+        "z": -2
+      },
+      "rotation": {
+        "x": 90,
+        "y": 90,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 1,
+        "z": -2
+      },
+      "color": "ColorTeal"
+    },
+    {
+      "type": "SmallWheel",
+      "position": {
+        "x": 2,
+        "y": 1,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 180
+      },
+      "anchor": {
+        "x": 1,
+        "y": 1,
+        "z": -2
+      },
+      "color": "ColorTeal"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 2,
+        "y": 2,
+        "z": -2
+      },
+      "rotation": {
+        "x": 90,
+        "y": 90,
+        "z": 0
+      },
+      "anchor": {
+        "x": 2,
+        "y": 1,
+        "z": -2
+      },
+      "color": "ColorTeal"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 2,
+        "y": 3,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 0
+      },
+      "anchor": {
+        "x": 2,
+        "y": 2,
+        "z": -2
+      },
+      "color": "ColorTeal"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": -1,
+        "y": 1,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 90
+      },
+      "anchor": {
+        "x": 0,
+        "y": 1,
+        "z": -2
+      },
+      "name": "V1"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -1,
+        "y": 2,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 270
+      },
+      "anchor": {
+        "x": -1,
+        "y": 1,
+        "z": -2
+      },
+      "color": "ColorRed"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -1,
+        "y": 3,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": -1,
+        "y": 2,
+        "z": -2
+      },
+      "color": "ColorRed"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 0,
+        "y": 1,
+        "z": 1
+      },
+      "rotation": {
+        "x": 90,
+        "y": 180,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 1,
+        "z": 2
+      },
+      "color": "ColorDarkGray"
+    },
+    {
+      "type": "TouchSensor",
+      "position": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "rotation": {
+        "x": 270,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 1,
+        "z": 1
+      },
+      "name": "TF"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "rotation": {
+        "x": 90,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "color": "ColorGray"
+    },
+    {
+      "type": "SmallWheel",
+      "position": {
+        "x": -1,
+        "y": 1,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "color": "ColorGray"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -1,
+        "y": 2,
+        "z": 0
+      },
+      "rotation": {
+        "x": 90,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": -1,
+        "y": 1,
+        "z": 0
+      },
+      "color": "ColorGray"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -1,
+        "y": 3,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": -1,
+        "y": 2,
+        "z": 0
+      },
+      "color": "ColorGray"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": 2,
+        "y": 1,
+        "z": 0
+      },
+      "rotation": {
+        "x": 90,
+        "y": 180,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "name": "G2"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 2,
+        "y": 2,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 90
+      },
+      "anchor": {
+        "x": 2,
+        "y": 1,
+        "z": 0
+      },
+      "color": "ColorOrange"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 2,
+        "y": 3,
+        "z": 0
+      },
+      "rotation": {
+        "x": 270,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": 2,
+        "y": 2,
+        "z": 0
+      },
+      "color": "ColorOrange"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 0,
+        "y": 2,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 90
+      },
+      "anchor": {
+        "x": 0,
+        "y": 1,
+        "z": 1
+      },
+      "color": "ColorDarkGray"
+    },
+    {
+      "type": "UltrasonicSensor",
+      "position": {
+        "x": -1,
+        "y": 0,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": -1,
+        "y": -1,
+        "z": 1
+      },
+      "name": "UFC"
+    }
+  ]
+}

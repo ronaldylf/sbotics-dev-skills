@@ -1,0 +1,1772 @@
+{
+  "name": "Obsidian",
+  "blocks": [
+    {
+      "type": "Cube",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": -1
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": -1,
+        "y": 0,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": -1
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": -1,
+        "y": 0,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": -1,
+        "y": 0,
+        "z": -1
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": -1
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": -1
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": -2,
+        "y": 0,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 270
+      },
+      "anchor": {
+        "x": -1,
+        "y": 0,
+        "z": -2
+      },
+      "name": "backLeftMotor"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": 2,
+        "y": 0,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 270
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": -2
+      },
+      "name": "backRightMotor"
+    },
+    {
+      "type": "LargeWheel",
+      "position": {
+        "x": -3,
+        "y": 0,
+        "z": -2
+      },
+      "rotation": {
+        "x": 270,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": -2,
+        "y": 0,
+        "z": -2
+      },
+      "color": "ColorBlack"
+    },
+    {
+      "type": "LargeWheel",
+      "position": {
+        "x": 3,
+        "y": 0,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "anchor": {
+        "x": 2,
+        "y": 0,
+        "z": -2
+      },
+      "color": "ColorBlack"
+    },
+    {
+      "type": "TouchSensor",
+      "position": {
+        "x": -1,
+        "y": 0,
+        "z": -3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": -1,
+        "y": 0,
+        "z": -2
+      },
+      "name": "touchLeft"
+    },
+    {
+      "type": "TouchSensor",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": -3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": -1,
+        "y": 0,
+        "z": -3
+      },
+      "name": "touchMid"
+    },
+    {
+      "type": "TouchSensor",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": -3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": -2
+      },
+      "name": "touchRight"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 0,
+        "y": 1,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 180
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": -2
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": 0,
+        "y": 2,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "anchor": {
+        "x": 0,
+        "y": 1,
+        "z": -2
+      },
+      "name": "bag"
+    },
+    {
+      "type": "UltrasonicSensor",
+      "position": {
+        "x": -1,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 180
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "name": "ultraLeft"
+    },
+    {
+      "type": "UltrasonicSensor",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "name": "ultraRight"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": -1,
+        "y": 0,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 180
+      },
+      "anchor": {
+        "x": -1,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": 2
+      },
+      "rotation": {
+        "x": 90,
+        "y": 180,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": 1
+      },
+      "name": "frontRight"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": -1,
+        "y": 0,
+        "z": 2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 90
+      },
+      "anchor": {
+        "x": -1,
+        "y": 0,
+        "z": 1
+      },
+      "name": "frontLeft"
+    },
+    {
+      "type": "UltrasonicSensor",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "name": "ultraDown"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 1,
+        "y": 1,
+        "z": 2
+      },
+      "rotation": {
+        "x": 90,
+        "y": 180,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": 2
+      },
+      "color": "ColorDarkGray"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": -1,
+        "y": 1,
+        "z": 2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 90
+      },
+      "anchor": {
+        "x": -1,
+        "y": 0,
+        "z": 2
+      },
+      "color": "ColorDarkGray"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": 1,
+        "y": 1,
+        "z": 3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 1,
+        "z": 2
+      },
+      "name": "colorRight"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": 0,
+        "y": 1,
+        "z": 3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 1,
+        "z": 3
+      },
+      "name": "colorMiddle"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": -1,
+        "y": 1,
+        "z": 3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 1,
+        "z": 3
+      },
+      "name": "colorLeft"
+    },
+    {
+      "type": "UltrasonicSensor",
+      "position": {
+        "x": -1,
+        "y": 2,
+        "z": 3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 180
+      },
+      "anchor": {
+        "x": -1,
+        "y": 1,
+        "z": 3
+      },
+      "name": "ultraMid"
+    },
+    {
+      "type": "UltrasonicSensor",
+      "position": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 180
+      },
+      "anchor": {
+        "x": 1,
+        "y": 1,
+        "z": 3
+      },
+      "name": "ultraMidRight"
+    },
+    {
+      "type": "SmallWheel",
+      "position": {
+        "x": 1,
+        "y": 3,
+        "z": 3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 270
+      },
+      "anchor": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "SmallWheel",
+      "position": {
+        "x": -1,
+        "y": 3,
+        "z": 3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 270
+      },
+      "anchor": {
+        "x": -1,
+        "y": 2,
+        "z": 3
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": 0,
+        "y": 3,
+        "z": 3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "anchor": {
+        "x": -1,
+        "y": 3,
+        "z": 3
+      },
+      "name": "arm"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": 2,
+        "y": 0,
+        "z": 2
+      },
+      "rotation": {
+        "x": 90,
+        "y": 90,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": 2
+      },
+      "name": "rightMotor"
+    },
+    {
+      "type": "LargeWheel",
+      "position": {
+        "x": 3,
+        "y": 0,
+        "z": 2
+      },
+      "rotation": {
+        "x": 90,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": 2,
+        "y": 0,
+        "z": 2
+      },
+      "color": "ColorBlack"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": -2,
+        "y": 0,
+        "z": 2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 270
+      },
+      "anchor": {
+        "x": -1,
+        "y": 0,
+        "z": 2
+      },
+      "name": "leftMotor"
+    },
+    {
+      "type": "LargeWheel",
+      "position": {
+        "x": -3,
+        "y": 0,
+        "z": 2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 90
+      },
+      "anchor": {
+        "x": -2,
+        "y": 0,
+        "z": 2
+      },
+      "color": "ColorBlack"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 0,
+        "y": 2,
+        "z": 3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 3,
+        "z": 3
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 0,
+        "y": 2,
+        "z": 4
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 2,
+        "z": 3
+      },
+      "color": "ColorWhite"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 0,
+        "y": 1,
+        "z": 4
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 2,
+        "z": 4
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Servomotor",
+      "position": {
+        "x": -1,
+        "y": 1,
+        "z": 4
+      },
+      "rotation": {
+        "x": 270,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 1,
+        "z": 4
+      },
+      "name": "hand"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 1,
+        "y": 1,
+        "z": 4
+      },
+      "rotation": {
+        "x": 90,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 1,
+        "z": 4
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": 4
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 180
+      },
+      "anchor": {
+        "x": 1,
+        "y": 1,
+        "z": 4
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": 5
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 180
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": 4
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 1,
+        "y": 0,
+        "z": 6
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 180
+      },
+      "anchor": {
+        "x": 1,
+        "y": 0,
+        "z": 5
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -1,
+        "y": 0,
+        "z": 4
+      },
+      "rotation": {
+        "x": 270,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": -1,
+        "y": 1,
+        "z": 4
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 4
+      },
+      "rotation": {
+        "x": 90,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": -1,
+        "y": 0,
+        "z": 4
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 5
+      },
+      "rotation": {
+        "x": 90,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 4
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 6
+      },
+      "rotation": {
+        "x": 90,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 5
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": -2,
+        "y": 1,
+        "z": 3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 0
+      },
+      "anchor": {
+        "x": -1,
+        "y": 1,
+        "z": 3
+      },
+      "name": "colorLL"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": 2,
+        "y": 1,
+        "z": 3
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 1,
+        "z": 3
+      },
+      "name": "colorRR"
+    },
+    {
+      "type": "UltrasonicSensor",
+      "position": {
+        "x": 0,
+        "y": 1,
+        "z": 2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 1,
+        "z": 3
+      },
+      "name": "ultraBag"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 0,
+        "y": 2,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "anchor": {
+        "x": 0,
+        "y": 2,
+        "z": -2
+      },
+      "color": "ColorDarkGray"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 0,
+        "y": 2,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "anchor": {
+        "x": 0,
+        "y": 2,
+        "z": -1
+      },
+      "color": "ColorDarkGray"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": -1,
+        "y": 2,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "anchor": {
+        "x": 0,
+        "y": 2,
+        "z": -1
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": -1,
+        "y": 2,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "anchor": {
+        "x": 0,
+        "y": 2,
+        "z": 0
+      },
+      "color": "ColorDarkGray"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 1,
+        "y": 2,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "anchor": {
+        "x": 0,
+        "y": 2,
+        "z": 0
+      },
+      "color": "ColorDarkGray"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 1,
+        "y": 2,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "anchor": {
+        "x": 0,
+        "y": 2,
+        "z": -1
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "color": "ColorDarkGray"
+    },
+    {
+      "type": "UltrasonicSensor",
+      "position": {
+        "x": 0,
+        "y": 3,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": 0,
+        "y": 2,
+        "z": -2
+      },
+      "name": "ultraBack"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 1,
+        "y": 3,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": 0,
+        "y": 3,
+        "z": -2
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -1,
+        "y": 3,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": 0,
+        "y": 3,
+        "z": -2
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 1,
+        "y": 4,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": 1,
+        "y": 3,
+        "z": -2
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -1,
+        "y": 4,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": -1,
+        "y": 3,
+        "z": -2
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 0,
+        "y": 4,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": -1,
+        "y": 4,
+        "z": -2
+      },
+      "color": "ColorGray"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": -2,
+        "y": 3,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": -1,
+        "y": 3,
+        "z": -2
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": 2,
+        "y": 3,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": 1,
+        "y": 3,
+        "z": -2
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 2,
+        "y": 4,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 180
+      },
+      "anchor": {
+        "x": 1,
+        "y": 4,
+        "z": -2
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 2,
+        "y": 4,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 180
+      },
+      "anchor": {
+        "x": 2,
+        "y": 4,
+        "z": -2
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 2,
+        "y": 4,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 180
+      },
+      "anchor": {
+        "x": 2,
+        "y": 4,
+        "z": -1
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 2,
+        "y": 4,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 90,
+        "z": 180
+      },
+      "anchor": {
+        "x": 2,
+        "y": 4,
+        "z": 0
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -2,
+        "y": 4,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 180
+      },
+      "anchor": {
+        "x": -2,
+        "y": 3,
+        "z": -2
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -2,
+        "y": 4,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 180
+      },
+      "anchor": {
+        "x": -2,
+        "y": 4,
+        "z": -2
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -2,
+        "y": 4,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 180
+      },
+      "anchor": {
+        "x": -2,
+        "y": 4,
+        "z": -1
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -2,
+        "y": 4,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 270,
+        "z": 180
+      },
+      "anchor": {
+        "x": -2,
+        "y": 4,
+        "z": 0
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": 2,
+        "y": 3,
+        "z": -1
+      },
+      "rotation": {
+        "x": 270,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": 2,
+        "y": 3,
+        "z": -2
+      },
+      "name": "bagColorL"
+    },
+    {
+      "type": "ColorSensor",
+      "position": {
+        "x": 2,
+        "y": 3,
+        "z": 0
+      },
+      "rotation": {
+        "x": 270,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": 2,
+        "y": 3,
+        "z": -1
+      },
+      "name": "bagColorR"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": -2,
+        "y": 3,
+        "z": -1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": -2,
+        "y": 3,
+        "z": -2
+      },
+      "color": "ColorRed"
+    },
+    {
+      "type": "Cube",
+      "position": {
+        "x": -2,
+        "y": 3,
+        "z": 0
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": -2,
+        "y": 3,
+        "z": -1
+      },
+      "color": "ColorRed"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 2,
+        "y": 3,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 270
+      },
+      "anchor": {
+        "x": 2,
+        "y": 3,
+        "z": 0
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 1,
+        "y": 3,
+        "z": 1
+      },
+      "rotation": {
+        "x": 90,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 2,
+        "y": 3,
+        "z": 1
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 0,
+        "y": 3,
+        "z": 1
+      },
+      "rotation": {
+        "x": 90,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 3,
+        "z": 1
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -1,
+        "y": 3,
+        "z": 1
+      },
+      "rotation": {
+        "x": 90,
+        "y": 0,
+        "z": 0
+      },
+      "anchor": {
+        "x": 0,
+        "y": 3,
+        "z": 1
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -2,
+        "y": 3,
+        "z": 1
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 90
+      },
+      "anchor": {
+        "x": -2,
+        "y": 3,
+        "z": 0
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -1,
+        "y": 5,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": -1,
+        "y": 4,
+        "z": -2
+      },
+      "color": "ColorDarkGray"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 0,
+        "y": 5,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": -1,
+        "y": 5,
+        "z": -2
+      },
+      "color": "ColorDarkGray"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 1,
+        "y": 5,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": 0,
+        "y": 5,
+        "z": -2
+      },
+      "color": "ColorDarkGray"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 2,
+        "y": 5,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": 1,
+        "y": 5,
+        "z": -2
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -2,
+        "y": 5,
+        "z": -2
+      },
+      "rotation": {
+        "x": 0,
+        "y": 180,
+        "z": 180
+      },
+      "anchor": {
+        "x": -1,
+        "y": 5,
+        "z": -2
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -2,
+        "y": 2,
+        "z": -1
+      },
+      "rotation": {
+        "x": 270,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": -1,
+        "y": 2,
+        "z": -1
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": -2,
+        "y": 2,
+        "z": 0
+      },
+      "rotation": {
+        "x": 270,
+        "y": 270,
+        "z": 0
+      },
+      "anchor": {
+        "x": -2,
+        "y": 2,
+        "z": -1
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 2,
+        "y": 2,
+        "z": -1
+      },
+      "rotation": {
+        "x": 270,
+        "y": 90,
+        "z": 0
+      },
+      "anchor": {
+        "x": 1,
+        "y": 2,
+        "z": -1
+      },
+      "color": "ColorCyan"
+    },
+    {
+      "type": "Wedge",
+      "position": {
+        "x": 2,
+        "y": 2,
+        "z": 0
+      },
+      "rotation": {
+        "x": 270,
+        "y": 90,
+        "z": 0
+      },
+      "anchor": {
+        "x": 2,
+        "y": 2,
+        "z": -1
+      },
+      "color": "ColorCyan"
+    }
+  ]
+}
